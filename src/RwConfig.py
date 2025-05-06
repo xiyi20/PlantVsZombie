@@ -15,7 +15,7 @@ class RwConfig:
     def lconfig(self):
         if self.file:
             self.file.close()
-        self.file = open('../config.json', 'r', encoding='utf-8')
+        self.file = open('./config.json', 'r', encoding='utf-8')
         self.config = json.load(self.file)
         self.rConfig()
 
