@@ -138,7 +138,7 @@ class Game:
         for key in rwConfig.prop:
             prop = rwConfig.prop[key]
             if prop['state'] == 0:
-                obj = globals()[Const.PROP[key]]
+                obj = getattr(sys.modules['src.Plant'], Const.PROP[key])
                 self.plantCards[obj.getimage(1)] = obj
 
     def selectPlant(self):

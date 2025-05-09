@@ -51,10 +51,10 @@ jobs:
       - name: Create Executable
         run: |
           cd src
-          pyinstaller --name=temp --onefile --windowed --icon '..\img\icon.ico' ../Main.py Card.py Coin.py Const.py Game.py Lawn.py Menu.py Object.py Plant.py RWconfig.py Source.py Zombie.py
+          pyinstaller --name=temp --onefile --windowed --icon '..\img\icon.ico' ..\Main.py Card.py Coin.py Const.py Game.py Lawn.py Menu.py Entity.py Plant.py RWconfig.py Source.py Zombie.py
           cd ..
 
-      - name: Init Files(Gemini)
+      - name: Init Files(PVZ)
         run: |
           mkdir temp2\PVZ\img
           mkdir temp2\PVZ\font
@@ -63,7 +63,7 @@ jobs:
           xcopy /E /I aud\* temp2\PVZ\aud
           xcopy /E /I font\* temp2\PVZ\font
           copy config.json temp2\PVZ
-          copy src\dist\temp.exe 'temp2\PVZ\Plant Vs Zombie α.exe'
+          copy src\dist\temp.exe 'temp2\PVZ\Plant Vs Zombie.exe'
 
 
       - name: Upload Artifacts
