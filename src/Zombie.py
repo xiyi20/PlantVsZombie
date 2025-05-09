@@ -99,7 +99,7 @@ class Zombie:
             random.choice(zombie_falling_ogg).play()
 
     def destroy(self):
-        from src.Object import Sun
+        from src.Entity import Sun
         choose = random.randrange(100)
         if 0 < choose <= 10:
             money = None

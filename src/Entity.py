@@ -7,7 +7,7 @@ from src import Const
 from src.Source import objectType, screen, car_ogg, shoot_ogg
 
 
-class Object:
+class Entity:
     def __init__(self) -> None:
         self.y = None
         self.x = None
@@ -23,7 +23,7 @@ class Object:
         self.tick += 1
 
 
-class Car(Object):
+class Car(Entity):
     def __init__(self, x, y, gameObj) -> None:
         super().__init__()
         self.speed = 4
@@ -53,7 +53,7 @@ class Car(Object):
             self.game.Cars.remove(self)
 
 
-class Sun(Object):
+class Sun(Entity):
     def __init__(self, val, pos, gameObj, falling=False):
         super().__init__()
         self.val = val
@@ -98,7 +98,7 @@ class Sun(Object):
         self.game.Suns.remove(self)
 
 
-class Peas(Object):
+class Peas(Entity):
     def __init__(self, x, y, gameObj, damm=20) -> None:
         super().__init__()
         self.x = x + 35

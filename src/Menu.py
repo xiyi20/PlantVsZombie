@@ -13,7 +13,7 @@ from src.Source import getImageSource, getSoundEffect, screen, invalidClick_ogg,
 class Menu:
     def __init__(self, game) -> None:
         self.pointerRect = None
-        self.mainMenuObj = None
+        self.mainMenu = None
         self.flag = True
         self.game = game
         self.pause_ogg = getSoundEffect('aud/pause.ogg')
@@ -56,7 +56,7 @@ class Menu:
     def draw(self):
         self.flag = True
         from src.Source import mainMenu
-        self.mainMenuObj = mainMenu
+        self.mainMenu = mainMenu
         if self.game.started:
             self.pointPos = (rwConfig.gameVolume / 0.008775 + 350, 208)
             self.pause_ogg.play()
@@ -86,8 +86,8 @@ class Menu:
                         self.game.flag = False
                         self.game.started = False
                         pygame.mixer.music.stop()
-                        self.mainMenuObj.playmusic()
-                        self.mainMenuObj.draw()
+                        self.mainMenu.playmusic()
+                        self.mainMenu.draw()
                     else:
                         self.isPoint = False
                 elif event.type == pygame.MOUSEBUTTONUP:
@@ -304,6 +304,7 @@ class MainMenu:
         else:
             menuClick_ogg.play()
             return True
+        return False
 
     def setName(self):
         self.naming = True

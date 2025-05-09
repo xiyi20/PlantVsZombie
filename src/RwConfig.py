@@ -28,7 +28,7 @@ class RwConfig:
         self.prop = self.config['prop']
 
     def wConfig(self, zone, name, value, prop=False):
-        with open('../config.json', 'w') as f:
+        with open('./config.json', 'w') as f:
             if prop:
                 self.config['prop'][zone][name] = value
             else:

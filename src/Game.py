@@ -6,7 +6,7 @@ import pygame
 from src import Const
 from src.Card import Card
 from src.Coin import GoldCoin
-from src.Object import Car, Sun
+from src.Entity import Car, Sun
 from src.Plant import SunFlower, PeaShooter, Repeater, SpicyChili, NutsWall, PotatoMine, CherryBomb, Torchwood, \
     GatlingPea
 from src.RwConfig import rwConfig
@@ -144,7 +144,7 @@ class Game:
     def selectPlant(self):
         curCards = 0
         pygame.mixer.music.load(
-            '../aud/bgm/Choose Your Seeds-Laura Shigihara.mp3')
+            './aud/bgm/Choose Your Seeds-Laura Shigihara.mp3')
         pygame.mixer.music.play(-1)
         self.Cards = []
         col, row = 0, 0
@@ -340,7 +340,7 @@ class Game:
 
     @staticmethod
     def playmusic():
-        pygame.mixer.music.load("../"+random.choice(backGroundMusic))
+        pygame.mixer.music.load("./"+random.choice(backGroundMusic))
         pygame.mixer.music.set_volume(rwConfig.gameVolume)
         pygame.mixer.music.play(-1)
 

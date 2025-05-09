@@ -51,7 +51,7 @@ jobs:
       - name: Create Executable
         run: |
           cd src
-          pyinstaller --name=temp --onefile --windowed --icon '..\img\icon.ico' Card.py Coin.py Const.py Game.py Lawn.py Main.py Menu.py Object.py Plant.py RWconfig.py Source.py Zombie.py
+          pyinstaller --name=temp --onefile --windowed --icon '..\img\icon.ico' ../Main.py Card.py Coin.py Const.py Game.py Lawn.py Menu.py Object.py Plant.py RWconfig.py Source.py Zombie.py
           cd ..
 
       - name: Init Files(Gemini)

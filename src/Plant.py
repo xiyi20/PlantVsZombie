@@ -4,7 +4,7 @@ import random
 import pygame
 
 from src import Const
-from src.Object import TrackPea, Sun, Peas
+from src.Entity import TrackPea, Sun, Peas
 from src.Source import objectType, plantType, getImageSource, getSoundEffect, screen, zombieEating_ogg, plantDead_ogg, \
     potatoActive_ogg, potatoBoom_ogg, cherryBoom_ogg
 
