@@ -1,6 +1,6 @@
 demo.py
 extractor.py
-img/主界面/SRGB.bat
+img/menu/SRGB.bat
 .vscode/*
-src/__pycache__/*
+__pycache__/
 .idea/*
